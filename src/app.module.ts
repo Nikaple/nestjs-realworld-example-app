@@ -8,18 +8,16 @@ import { ProfileModule } from './profile/profile.module';
 import { TagModule } from './tag/tag.module';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot(),
-    ArticleModule,
-    UserModule,
-    ProfileModule,
-    TagModule
-  ],
-  controllers: [
-    AppController
-  ],
-  components: []
+    imports: [
+        TypeOrmModule.forRoot(),
+        ArticleModule,
+        UserModule,
+        ProfileModule,
+        TagModule,
+    ],
+    controllers: [AppController],
+    providers: [],
 })
 export class ApplicationModule {
-  constructor(private readonly connection: Connection) {}
+    constructor(private readonly connection: Connection) {}
 }

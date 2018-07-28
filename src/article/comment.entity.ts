@@ -3,13 +3,10 @@ import { ArticleEntity } from './article.entity';
 
 @Entity()
 export class Comment {
+    @PrimaryGeneratedColumn() id: number;
 
-  @PrimaryGeneratedColumn()
-  id: number;
+    @Column() body: string;
 
-  @Column()
-  body: string;
-
-  @ManyToOne(type => ArticleEntity, article => article.comments)
-  article: ArticleEntity;
+    @ManyToOne(type => ArticleEntity, article => article.comments)
+    article: ArticleEntity;
 }

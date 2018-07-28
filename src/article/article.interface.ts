@@ -1,32 +1,31 @@
 import { UserData } from '../user/user.interface';
 import { ArticleEntity } from './article.entity';
 interface Comment {
-  body: string;
+    body: string;
 }
 
 interface ArticleData {
-  slug: string;
-  title: string;
-  description: string;
-  body?: string;
-  tagList?: string[];
-  createdAt?: Date
-  updatedAt?: Date
-  favorited?: boolean;
-  favoritesCount?: number;
-  author?: UserData;
+    slug: string;
+    title: string;
+    description: string;
+    body?: string;
+    tagList?: string[];
+    createdAt?: Date;
+    updatedAt?: Date;
+    favorited?: boolean;
+    favoritesCount?: number;
+    author?: UserData;
 }
 
 export interface CommentsRO {
-  comments: Comment[];
+    comments: Comment[];
 }
 
 export interface ArticleRO {
-  article: ArticleEntity;
+    article: ArticleEntity;
 }
 
 export interface ArticlesRO {
-  articles: ArticleEntity[];
-  articlesCount: number;
+    articles: ArticleEntity[];
+    articlesCount: number;
 }
-
